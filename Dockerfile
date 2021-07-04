@@ -9,14 +9,13 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM alpine:latest
+FROM node:12-alpine
 WORKDIR /app
 COPY --from=builder app/node_modules .
 COPY --from=builder app/dist .
 
 # Application
-USER node
 ENV PORT=4000
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["node", "dist/main.js"]
