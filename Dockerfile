@@ -11,8 +11,8 @@ RUN npm run build
 
 FROM node:12-alpine
 WORKDIR /app
-COPY --from=builder app/node_modules .
-COPY --from=builder app/dist .
+COPY --from=builder app/node_modules ./node_modules
+COPY --from=builder app/dist ./dist
 
 # Application
 ENV PORT=4000
