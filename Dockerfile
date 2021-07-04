@@ -15,7 +15,7 @@ COPY --from=builder app/node_modules ./node_modules
 COPY --from=builder app/dist ./dist
 
 # Application
-ENV PORT=4000
-EXPOSE 80
+ENV PORT=8081
+EXPOSE 8081
 
 CMD ["node", "dist/main.js"]
