@@ -1,0 +1,17 @@
+# npm generated files
+node_modules
+
+# enviroment variables
+.env
+
+# git
+.git
+.gitignore
+
+# application generated files
+dist
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
